@@ -1,0 +1,11 @@
+{"name": "wan", "scope": "wan", "root_prefix": "10.0.0.0/16",
+ "routing_sites": 5, "multi_cloud": true, "resiliency": true,
+ "sites": [{"name": "Mumbai", "users": 600},
+           {"name": "Delhi", "users": 500},
+           {"name": "Bengaluru", "users": 500},
+           {"name": "Chennai", "users": 400},
+           {"name": "Cloud-VPC", "users": 50}],
+ "links": [{"name": "MUM-DEL", "distance_m": 1150000},
+           {"name": "DEL-BLR", "distance_m": 1750000},
+           {"name": "BLR-CHE", "distance_m": 290000},
+           {"name": "MUM-BLR", "distance_m": 840000}]}

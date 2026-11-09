@@ -1,3 +1,7 @@
+mynet1/
+__pycache__/
+*.pyc
+.pytest_cache/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

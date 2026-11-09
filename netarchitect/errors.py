@@ -9,3 +9,4 @@ class AddressSpaceExhaustedError(NetArchitectError):
 
 class InvalidParameterError(NetArchitectError):
     """Bad or missing input parameter."""
+

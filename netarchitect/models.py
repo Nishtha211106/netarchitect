@@ -26,4 +26,4 @@ class Design:
     profile: str
     decisions: list[Decision] = field(default_factory=list)
     subnets: list[Subnet] = field(default_factory=list)
-    configs: dict[str, str] = field(default_factory=dict)  # device -> config texte
+    configs: dict[str, str] = field(default_factory=dict)  # device -> config text

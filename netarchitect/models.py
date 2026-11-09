@@ -2,15 +2,15 @@ from dataclasses import dataclass, field
 
 @dataclass
 class Decision:
-    domain: str        # "media" | "routing" | "topology" | "subnetting"
-    choice: str
+    category: str      # "media", "transceiver", "routing", "topology", "subnetting"
+    choice: str        # e.g. "OS2 SMF"
     rationale: str     # must contain the real numbers
 
 @dataclass
 class Subnet:
-    name: str
+    name: str                  # department / VLAN name
     requested_hosts: int
-    network: str
+    network: str               # dotted quad, e.g. "192.168.0.128"
     prefix: int
     mask: str
     wildcard: str
@@ -23,9 +23,7 @@ class Subnet:
 
 @dataclass
 class Design:
-    params: dict = field(default_factory=dict)
-    profile: str = ""
-    decisions: list = field(default_factory=list)   # list[Decision]
-    requests: list = field(default_factory=list)    # [{"name":..., "hosts":...}]
-    subnets: list = field(default_factory=list)     # list[Subnet]
-    configs: dict = field(default_factory=dict)     # device -> config text
+    profile: str
+    decisions: list[Decision] = field(default_factory=list)
+    subnets: list[Subnet] = field(default_factory=list)
+    configs: dict[str, str] = field(default_factory=dict)  # device -> config text

@@ -1,6 +1,12 @@
 class NetArchitectError(Exception):
-    """Base class so the CLI can catch everything cleanly."""
+    """Base class for all project errors."""
 
-class PhysicalDistanceViolationError(NetArchitectError): pass
-class AddressSpaceExhaustedError(NetArchitectError): pass
-class InvalidParameterError(NetArchitectError): pass
+class PhysicalDistanceViolationError(NetArchitectError):
+    """Copper requested beyond 100 m."""
+
+class AddressSpaceExhaustedError(NetArchitectError):
+    """Host requests do not fit inside the root block."""
+
+class InvalidParameterError(NetArchitectError):
+    """Bad or missing input parameter."""
+

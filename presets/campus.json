@@ -1,0 +1,9 @@
+{"name": "campus", "scope": "campus", "root_prefix": "10.0.0.0/16",
+ "routing_sites": 1, "multi_cloud": false, "resiliency": true,
+ "sites": [{"name": "Building-A", "users": 600},
+           {"name": "Building-B", "users": 600},
+           {"name": "Building-C", "users": 400}],
+ "links": [{"name": "Access-Run", "distance_m": 90, "p2p": false},
+           {"name": "A-B", "distance_m": 180},
+           {"name": "B-C", "distance_m": 260},
+           {"name": "A-C", "distance_m": 390}]}

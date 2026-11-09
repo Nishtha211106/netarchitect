@@ -1,0 +1,8 @@
+{"name": "metro", "scope": "metro", "root_prefix": "10.0.0.0/22",
+ "routing_sites": 3, "multi_cloud": false, "resiliency": true,
+ "sites": [{"name": "HQ", "users": 250},
+           {"name": "Remote1", "users": 100},
+           {"name": "Remote2", "users": 100}],
+ "links": [{"name": "HQ-R1", "distance_m": 15000},
+           {"name": "HQ-R2", "distance_m": 35000},
+           {"name": "R1-R2", "distance_m": 22000}]}
